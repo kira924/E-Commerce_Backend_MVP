@@ -13,6 +13,8 @@ from app.core.database import Base
 import app.models.user
 import app.models.products
 import app.models.address
+import app.models.cart
+import app.models.order
 
 # This is the Alembic Config object
 config = context.config

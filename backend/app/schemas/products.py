@@ -33,3 +33,17 @@ class ProductResponse(ProductBase):
 
     class Config:
         from_attributes = True
+
+# Schema for updating an existing category
+class CategoryUpdate(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+
+# Schema for updating an existing product
+class ProductUpdate(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    price: Optional[float] = None
+    stock_quantity: Optional[int] = None
+    is_active: Optional[bool] = None
+    category_id: Optional[int] = None

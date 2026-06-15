@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import auth, products, addresses
+from app.api import auth, products, addresses, cart, orders
 
 # Initialize FastAPI application
 app = FastAPI(title="Maison Morey API")
@@ -18,3 +18,5 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(products.router)
 app.include_router(addresses.router)
+app.include_router(cart.router)
+app.include_router(orders.router)
